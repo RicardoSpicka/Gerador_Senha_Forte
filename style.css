@@ -253,6 +253,12 @@ main {
     background-color: #9b51e0;
 }
 
+.footer h1{
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+
 @media only screen and (max-width: 800px){
     .senha{
         padding: 1rem 1rem;
@@ -309,5 +315,11 @@ main {
     }
     .acoes img{
         width: 38px;
+    }
+
+    .footer h1{
+        text-align: center;
+        margin-top: 1rem;
+        font-size: 0.8rem;
     }
 }
