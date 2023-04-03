@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap');
+
+body{
+    background-color: #f8fafd;
+    font-family: 'Inter', sans-serif;
+    color: #252525;
+    padding: 2rem;
+}
+
+main {
+    max-width: 880px;
+    margin: 0 auto;
+}
+
+.hero{
+    text-align: center;
+    padding-bottom: 3rem;
+}
+
+.hero .titulo{
+    font-size: 2rem;
+    font-weight: 700;
+    padding-bottom: 1.5rem;
+}
+
+.hero .subTitulo{
+    font-size: 1.125rem;
+    color: #828282;
+}
+
+.box{
+    background-color: #fff;
+    box-shadow: 0 1px 2px rgba(132, 148, 165, 0.8);
+    border-radius: 8px;
+    margin-bottom: 3rem;
+}
+
+.senha{
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+
+.senha .texto{
+    flex: 1;
+}
+
+.senha .texto input{
+    font-family: 'Inconsolata', monospace;
+    font-size: 2.5rem;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    cursor: default;
+    height: 52px;
+    width: 100%;
+    transition: all 0.2s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.senha .texto input.fontSm{
+    font-size: 2.5rem;
+}
+
+.senha .texto input.fontXSm{
+    font-size: 2.5rem;
+}
+
+.senha .texto input.fontXXSm{
+    font-size: 2.5rem;
+}
+
+.senha .acoes button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.indicadorSeguranca{
+    height: 10px;
+    background-color: #ddd;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.indicadorSeguranca .barra{
+    height: 10px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    transition: all 0.2s;
+}
+
+.indicadorSeguranca .barra.completa{
+    border-top-right-radius: 0;
+}
+
+.indicadorSeguranca .barra.critica{
+    background-color: #eb5757;
+}
+
+.indicadorSeguranca .barra.alerta{
+    background-color: #f2c94c;
+}
+
+.indicadorSeguranca .barra.segura{
+    background-color: #27ae60;
+}
+
+.customizacao{
+    padding: 1rem 1.5rem;
+}
+
+.customizacao .titulo{
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.acoes{
+    display: flex;
+    gap: 3rem;
+    color: #828282;
+}
+
+.acoes img{
+    width: 42px;
+}
+
+.acoes .tamanhoSenha{
+    flex: 1;
+}
+
+.configuracoes{
+    display: flex;
+    flex-direction: column;
+}
+
+.slider{
+    appearance: none;
+    -webkit-appearance: none;
+    height: 10px;
+    background: #dddddd;
+    outline: none;
+    border-radius: 8px;
+    width: 100%;
+    opacity: 0.7;
+    transition: opacity 0.2;
+    margin-top: 1rem;
+}
+
+.slider:hover{
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 25px;
+    background: #9251e0;
+    cursor: pointer;
+}
+
+.slider::-moz-slider-thumb{
+    width: 25px;
+    height: 25px;
+    border-radius: 25px;
+    background: #9251e0;
+    cursor: pointer;
+}
+
+.containerCheckbox{
+    display: block;
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.containerCheckbox input{
+    position: absolute;
+    height: 0;
+    width: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.containerCheckbox .checkmark{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #dddddd;
+    transition: all 0.2s;
+}
+
+.containerCheckbox:hover input ~ .checkmark{
+    background-color: #cccccc;
+}
+
+.containerCheckbox input:checked ~ .checkmark{
+    background-color: #9b51e0;
+}
+
+.containerCheckbox .checkmark:after{
+    content: "";
+    display: none;
+    position: absolute;
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 13px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+.containerCheckbox input:checked ~ .checkmark:after{
+    display: block;
+}
+
+.submit{
+    text-align: center;
+
+}
+
+.submit button{
+    background-color: #bb6bd9;
+    font-size: 1.375rem;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    transition: all 0.2s;
+}
+
+.submit button:hover{
+    background-color: #9b51e0;
+}
+
+@media only screen and (max-width: 800px){
+    .senha{
+        padding: 1rem 1rem;
+    }
+    
+    .senha .texto input{
+        font-size: 2.5rem;
+    }
+    
+    .senha .texto input.fontSm{
+        font-size: 1.8rem;
+    }
+    
+    .senha .texto input.fontXSm{
+        font-size: 1.7rem;
+    }
+    
+    .senha .texto input.fontXXSm{
+        font-size: 1.5rem;
+    }
+    
+    .acoes{
+        gap: 2rem;
+    }
+    
+    .acoes img{
+        width: 38px;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    .senha{
+        padding: 1rem;
+    }
+    
+    .senha .texto input{
+        font-size: 1.7rem;
+    }
+    
+    .senha .texto input.fontSm{
+        font-size: 1.5rem;
+    }
+    
+    .senha .texto input.fontXSm{
+        font-size: 1.2rem;
+    }
+    
+    .senha .texto input.fontXXSm{
+        font-size: 1.2rem;
+    }
+
+    .acoes{
+        gap: 1rem;
+    }
+    .acoes img{
+        width: 38px;
+    }
+}

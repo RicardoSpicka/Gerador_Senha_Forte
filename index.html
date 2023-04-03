@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Gerador de Senha Forte</title>
+</head>
+<body>
+    <main>
+        <section class="hero">
+            <h1 class="titulo">Gerador de Senha</h1>
+            <p class="subTitulo">Utilize o nosso gerador online para criar uma senha forte e segira.</p>
+        </section>  
+    
+        <section class="box">
+            <div class="senha">
+                <div class="texto">
+                    <input type="text" name="senha" id="senha">
+                </div>
+                <div class="acoes">
+                    <button id="copiar-1">
+                        <img src="copy-solid.svg">
+                    </button>
+                    <button id="renovar">
+                        <img src="repeat-solid.svg">
+                    </button>
+                </div>
+            </div>
+            <div class="indicadorSeguranca">
+                <div id="indicadorSeguramcaBarra" class="barra alerta"></div>
+            </div>
+        </section>
+
+        <section class="box customizacao">
+            <h3 class="titulo">Personalizar</h3>
+            <div class="acoes">
+                <div class="tamanhoSenha">
+                    <p>Tamanho: <span id="senhaTamanhoTexto">16</span></p>
+                    <input 
+                    type="range"
+                    nome="tamanhoSenha" 
+                    id="tamanhoSenha" 
+                    value="16" 
+                    min="4" 
+                    max="20"
+                    class="slider"
+                    />
+                </div>
+                <div class="configuracoes">
+                    <label class="containerCheckbox">
+                        <spam class="texto">Maiúsculas</spam>
+                        <input type="checkbox" id="checkMaiuscula" checked/>
+                        <spam class="checkmark"></spam>
+                    </label>
+                    <label class="containerCheckbox">
+                        <spam class="texto">Números</spam>
+                        <input type="checkbox" id="checkNumeros" checked/>
+                        <spam class="checkmark"></spam>
+                    </label>
+                    <label class="containerCheckbox">
+                        <spam class="texto">Símbolos</spam>
+                        <input type="checkbox" id="checkSimbolos" checked/>
+                        <spam class="checkmark"></spam>
+                    </label>
+                </div>
+            </div>
+        </section>
+
+        <div class="submit">
+            <button id="copiar-2">Copiar Senha</button>
+        </div>
+    
+</main>
+
+    <script src="gerador.js"></script>
+
+</body>
+</html>
